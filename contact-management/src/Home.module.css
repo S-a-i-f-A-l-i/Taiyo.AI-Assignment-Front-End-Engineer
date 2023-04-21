@@ -2,5 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     gap:20px;
-
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border: 5px solid #003a9b;
+    z-index: 100;
+    overflow-y: scroll;
 }

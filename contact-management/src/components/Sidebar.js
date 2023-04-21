@@ -8,6 +8,7 @@ const Sidebar = () => {
     //   }
     >
       <div className="content">
+        <img src="../../public/logo192.png" alt="logo-img" />
         <NavLinks />
       </div>
     </div>
