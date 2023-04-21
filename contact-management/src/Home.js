@@ -6,9 +6,11 @@ import styles from "./Home.module.css";
 const Home = () => {
   return (
     <main className={styles.container}>
-      <Sidebar />
+      <div className={styles.LeftContainer}>
+        <Sidebar />
+      </div>
       <div>
-        <div className="dashboard-page">
+        <div className={styles.RightContainer}>
           <Outlet />
         </div>
       </div>

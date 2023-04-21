@@ -1,9 +1,12 @@
 import React from "react";
+import TempFile from "../TempFile";
+import LineGraph from "./LineGraph";
 
 const ChartsAndMaps = () => {
   return (
     <div>
-      <h3>Charts And Maps</h3>
+      {/* <TempFile /> */}
+      <LineGraph />
     </div>
   );
 };
