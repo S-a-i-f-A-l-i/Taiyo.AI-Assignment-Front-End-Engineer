@@ -4,7 +4,6 @@ import OneContact from "./OneContact";
 
 const ShowContacts = () => {
   const contacts = useSelector((store) => store.contacts);
-  console.log(contacts);
   if (contacts && contacts.length === 0) {
     return (
       <div

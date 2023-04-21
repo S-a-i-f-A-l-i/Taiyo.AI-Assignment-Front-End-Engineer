@@ -4,6 +4,7 @@ import ChartsAndMaps from "./components/ChartsAndMaps";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import CreateContact from "./components/CreateContact";
+import EditContact from "./components/EditContact";
 function App() {
   return (
     <div>
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />}>
           <Route index element={<Contact />} />
           <Route path="/create" element={<CreateContact />} />
+          <Route path="/edit/:id" element={<EditContact />} />
           <Route path="charts-and-maps" element={<ChartsAndMaps />} />
         </Route>
         <Route path="*" element={<Error />} />

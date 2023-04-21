@@ -1,5 +1,6 @@
 import React from "react";
 import NavLinks from "./NavLinks";
+import styles from "./Sidebar.module.css";
 const Sidebar = () => {
   return (
     <div
@@ -7,7 +8,7 @@ const Sidebar = () => {
     // showSidebar ? "sidebar-container" : "sidebar-container show-sidebar"
     //   }
     >
-      <div className="content">
+      <div className={styles.content}>
         <img src="../../public/logo192.png" alt="logo-img" />
         <NavLinks />
       </div>

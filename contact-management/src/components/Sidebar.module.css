@@ -1,0 +1,7 @@
+.content {
+    background-color: red;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    padding: 10px ;
+}

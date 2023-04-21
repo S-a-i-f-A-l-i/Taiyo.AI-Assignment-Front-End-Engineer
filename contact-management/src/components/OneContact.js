@@ -1,7 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./OneContact.module.css";
+import { deleteContactAction } from "../redux/actions/actions";
+import { useDispatch } from "react-redux";
 const OneContact = ({ firstName, lastName, status, id }) => {
+  const dispatch = useDispatch();
+  const handleDelete = (id) => {
+    try {
+      deleteContactAction(id, dispatch);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className={styles.Wrapper}>
       <div>
@@ -11,7 +21,7 @@ const OneContact = ({ firstName, lastName, status, id }) => {
         </h3>
       </div>
       <Link to={`/edit/${id}`}>Edit</Link>
-      <button>Delete</button>
+      <button onClick={() => handleDelete(id)}>Delete</button>
     </div>
   );
 };

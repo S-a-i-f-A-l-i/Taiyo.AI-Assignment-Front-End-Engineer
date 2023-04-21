@@ -1,31 +1,31 @@
-import {
-  ADD_CONTACT,
-  UPDATE_CONTACT,
-  DELETE_CONTACT,
-} from "../actions/actions";
+import { ADD_CONTACT, EDIT_CONTACT, DELETE_CONTACT } from "../actions/actions";
 
-let initialStore = {
-  contacts: JSON.parse(localStorage.getItem("contacts")) || [],
-};
+let initialStore = [];
 
 const contactReducer = (state = initialStore, action) => {
-  console.log("contactReducer is called");
   if (action.type === ADD_CONTACT) {
-    return {
-      ...initialStore,
-      contacts: initialStore.contacts.push({
-        id: action.payload.id,
-        firstName: action.payload.firstName,
-        lastName: action.payload.lastName,
-        status: action.payload.status,
-      }),
-    };
+    state.push({
+      id: action.payload.id,
+      firstName: action.payload.firstName,
+      lastName: action.payload.lastName,
+      status: action.payload.status,
+    });
+    return state;
   }
-  if (action.type === UPDATE_CONTACT) {
-    // return contacts.push(action.payload);
+  if (action.type === EDIT_CONTACT) {
+    const findUser = state.find((con) => con.id === Number(action.payload.id));
+    if (findUser) {
+      findUser.firstName = action.payload.firstName;
+      findUser.lastName = action.payload.lastName;
+      findUser.status = action.payload.status;
+    }
+    return state;
   }
   if (action.type === DELETE_CONTACT) {
-    // return contacts.push(action.payload);
+    const findUser = state.find((con) => con.id === Number(action.payload.id));
+    if (findUser) {
+      return state.filter((con) => con.id !== findUser.id);
+    }
   }
   return state;
 };
