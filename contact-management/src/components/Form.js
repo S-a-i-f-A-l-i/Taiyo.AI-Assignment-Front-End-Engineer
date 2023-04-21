@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { addContactAction, editContactAction } from "../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
+import styles from "./Form.module.css";
 
 const Form = ({ id }) => {
   const [state, setState] = useState({
@@ -53,7 +54,7 @@ const Form = ({ id }) => {
     }
   }, [id]);
   return (
-    <div>
+    <div className={styles.wrapper}>
       <form onSubmit={handleSubmit}>
         <label>First Name:</label>
         <input

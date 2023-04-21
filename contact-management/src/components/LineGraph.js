@@ -25,7 +25,10 @@ const LineGraph = () => {
       setGraphDataOfCases(lineGraph);
     }
   }, []);
-  if (graphDataOfCases === null) return <h1>Loading...</h1>;
+  if (graphDataOfCases === null)
+    return (
+      <h1 style={{ textAlign: "center", margin: "100px auto" }}>Loading...</h1>
+    );
   return (
     <div>
       {Object.keys(graphDataOfCases).map((key, index) => {

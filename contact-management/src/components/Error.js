@@ -1,7 +1,28 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
+import pageNotFound from "./images/pageNotFound.jpg";
 const Error = () => {
-  return <div>Error</div>;
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/");
+  };
+  return (
+    <div
+      style={{
+        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+        width: "fit-content",
+        margin: "20px auto",
+        cursor: "pointer",
+      }}
+      onClick={handleClick}
+    >
+      <img
+        style={{ display: "block", margin: "auto" }}
+        src={pageNotFound}
+        alt="page-not-found"
+      />
+    </div>
+  );
 };
 
 export default Error;

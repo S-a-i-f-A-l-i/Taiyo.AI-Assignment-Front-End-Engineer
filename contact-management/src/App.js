@@ -5,12 +5,14 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import CreateContact from "./components/CreateContact";
 import EditContact from "./components/EditContact";
+import ContactDetail from "./components/ContactDetail";
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />}>
           <Route index element={<Contact />} />
+          <Route path="/:id" element={<ContactDetail />} />
           <Route path="/create" element={<CreateContact />} />
           <Route path="/edit/:id" element={<EditContact />} />
           <Route path="charts-and-maps" element={<ChartsAndMaps />} />

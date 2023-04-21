@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./OneContact.module.css";
 import { deleteContactAction } from "../redux/actions/actions";
 import { useDispatch } from "react-redux";
+
 const OneContact = ({ firstName, lastName, status, id }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleDelete = (id) => {
     try {
       deleteContactAction(id, dispatch);
@@ -12,16 +14,47 @@ const OneContact = ({ firstName, lastName, status, id }) => {
       console.log(error);
     }
   };
+  const handleDetails = (id) => {
+    navigate(`/${id}`);
+  };
   return (
     <div className={styles.Wrapper}>
-      <div>
-        <h1>Name: {firstName + " " + lastName}</h1>
-        <h3>
-          Status : <span>{status}</span>
-        </h3>
+      <div onClick={() => handleDetails(id)}>
+        <h3>Name: {firstName + " " + lastName}</h3>
+        <h4>Status : {status}</h4>
       </div>
-      <Link to={`/edit/${id}`}>Edit</Link>
-      <button onClick={() => handleDelete(id)}>Delete</button>
+      <Link
+        style={{
+          textAlign: "center",
+          border: "1px solid blue",
+          marginTop: "20px",
+          padding: "3px 10px",
+          textDecoration: "none",
+          backgroundColor: "green",
+          color: "black",
+          fontWeight: "bold",
+          borderRadius: "5px",
+        }}
+        to={`/edit/${id}`}
+      >
+        Edit
+      </Link>
+      &nbsp;&nbsp;
+      <button
+        style={{
+          textAlign: "center",
+          border: "1px solid blue",
+          marginTop: "20px",
+          padding: "5px 10px",
+          backgroundColor: "red",
+          color: "black",
+          fontWeight: "bold",
+          borderRadius: "5px",
+        }}
+        onClick={() => handleDelete(id)}
+      >
+        Delete
+      </button>
     </div>
   );
 };

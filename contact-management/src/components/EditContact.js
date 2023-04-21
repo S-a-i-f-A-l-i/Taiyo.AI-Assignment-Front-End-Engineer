@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 const CreateContact = () => {
   const { id } = useParams();
   return (
-    <div>
+    <div style={{ margin: "50px auto", textAlign: "center" }}>
       <h1>Edit Contact Screen</h1>
       <Form id={id} />
     </div>

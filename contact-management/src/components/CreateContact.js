@@ -3,7 +3,13 @@ import Form from "./Form";
 
 const CreateContact = () => {
   return (
-    <div>
+    <div
+      style={{
+        textAlign: "center",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <h1>Create Contact Screen</h1>
       <Form />
     </div>

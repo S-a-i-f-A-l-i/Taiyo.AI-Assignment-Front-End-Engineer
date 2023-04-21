@@ -1,21 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import OneContact from "./OneContact";
+import styles from "./ShowContacts.module.css";
 
 const ShowContacts = () => {
   const contacts = useSelector((store) => store.contacts);
   if (contacts && contacts.length === 0) {
     return (
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "20px",
-          width: "300px",
-          border: "2px solid black",
-          padding: "5px",
-        }}
-      >
+      <div className={styles.empty}>
         <span
           style={{
             border: "2px solid black",
@@ -30,7 +22,7 @@ const ShowContacts = () => {
     );
   }
   return (
-    <div>
+    <div className={styles.container}>
       {contacts &&
         contacts.map((el) => {
           return <OneContact {...el} key={el.id} />;
