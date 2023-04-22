@@ -10,7 +10,6 @@ const ContactDetail = () => {
   const contact = useSelector((store) =>
     store.contacts.find((con) => con.id === Number(id))
   );
-  console.log("contact", contact);
   const handleDelete = (id) => {
     try {
       navigate(-1);
