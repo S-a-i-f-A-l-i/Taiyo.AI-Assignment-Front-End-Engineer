@@ -1,6 +1,6 @@
 # Taiyo.AI-Assignment-Front-End-Engineer
 
-# Contact Management App with Charts and Maps [Link Text](https://contact-management-smoky.vercel.app/)
+# Contact Management App with Charts and Maps [Live Link](https://contact-management-smoky.vercel.app/)
 
 This is a contact management app built with ReactJS, TailwindCSS, React Router v6 and React Query, which also includes a dashboard with charts and maps showing COVID-19 data.
 
