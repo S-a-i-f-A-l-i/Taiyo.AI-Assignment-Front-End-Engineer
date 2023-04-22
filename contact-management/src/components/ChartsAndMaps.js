@@ -1,7 +1,7 @@
 import React from "react";
-import TempFile from "../TempFile";
 import LineGraph from "./LineGraph";
 import MapData from "./MapData";
+import World from "./World";
 const ChartsAndMaps = () => {
   const style = {
     position: "fixed",
@@ -18,14 +18,14 @@ const ChartsAndMaps = () => {
         <h1 style={style}>Charts and Maps</h1>
       </div>
       <div>
+        <World />
+      </div>
+      <div>
         <LineGraph />
       </div>
       <div>
         <MapData />
       </div>
-      {/* <div>
-        <TempFile />
-      </div> */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { getWorldCases, getCountryCases } from "../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Marker, Popup } from "react-leaflet";
@@ -61,6 +61,7 @@ const MapData = () => {
     } else {
       SetCountrySpecificData(countryCases);
     }
+    // eslint-disable-next-line
   }, []);
 
   if (countrySpecificData === null)

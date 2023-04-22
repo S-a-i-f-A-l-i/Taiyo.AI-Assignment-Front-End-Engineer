@@ -27,7 +27,9 @@ const LineGraph = () => {
   }, []);
   if (graphDataOfCases === null)
     return (
-      <h1 style={{ textAlign: "center", margin: "100px auto" }}>Loading...</h1>
+      <h1 style={{ textAlign: "center", margin: "100px auto" }}>
+        Charts are Loading...
+      </h1>
     );
   return (
     <div>
