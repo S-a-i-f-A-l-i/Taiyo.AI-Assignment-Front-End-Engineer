@@ -1,6 +1,6 @@
 # Taiyo.AI-Assignment-Front-End-Engineer
 
-# Contact Management App with Charts and Maps
+# Contact Management App with Charts and Maps [Link Text](https://contact-management-smoky.vercel.app/)
 
 This is a contact management app built with ReactJS, TailwindCSS, React Router v6 and React Query, which also includes a dashboard with charts and maps showing COVID-19 data.
 
@@ -41,10 +41,11 @@ The following dependencies were used in this project:
 - redux
 - react-redux
 - fetch
-- react-chartjs-2
 - leaflet
 - react-leaflet
-- tailwindcss
+- tailwindCSS
+- ModuleCSS
+- ObjectCSS
 
 ## Features
 
@@ -56,4 +57,4 @@ The following dependencies were used in this project:
 
 ### Conclusion
 
-This contact management app with charts and maps provides an easy way to manage contacts and view COVID-19 data in a simple dashboard. The app is well-structured and easy to maintain, making it a great starter project for anyone looking to improve their skills in ReactJS, TypeScript, TailwindCSS, and React Query.
+This contact management app with charts and maps provides an easy way to manage contacts and view COVID-19 data in a simple dashboard. The app is well-structured and easy to maintain, making it a great starter project for anyone looking to improve their skills in ReactJS, ModuleCSS, TailwindCSS, ObjectCSS and React Query.
